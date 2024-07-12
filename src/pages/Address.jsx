@@ -1,7 +1,7 @@
-import React, { useContext, useState, useEffect } from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import { Store } from '../context/Store';
+import React, { useContext, useState, useEffect } from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import { Store } from "../context/Store";
 
 function Address({ setValidation }) {
   const {
@@ -120,12 +120,12 @@ function Address({ setValidation }) {
     <Box
       component="form"
       sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-        height: '60vh',
-        '& > :not(style)': { m: 5, width: '25ch' },
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexWrap: "wrap",
+        height: "60vh",
+        "& > :not(style)": { m: 5, width: "25ch" },
       }}
       noValidate
       autoComplete="off"
@@ -137,7 +137,7 @@ function Address({ setValidation }) {
         variant="standard"
         value={addressLine1}
         onChange={handleAddressLine1Change}
-        helperText={addressLine1E ? 'Address Line 1 is required' : ''}
+        helperText={addressLine1E ? "Address Line 1 is required" : ""}
       />
       <TextField
         id="addressLine2"
@@ -146,7 +146,7 @@ function Address({ setValidation }) {
         variant="standard"
         value={addressLine2}
         onChange={handleAddressLine2Change}
-        helperText={addressLine2E ? 'Address Line 2 is required' : ''}
+        helperText={addressLine2E ? "Address Line 2 is required" : ""}
       />
       <TextField
         id="city"
@@ -155,7 +155,7 @@ function Address({ setValidation }) {
         variant="standard"
         value={city}
         onChange={handleCityChange}
-        helperText={cityE ? 'City is required' : ''}
+        helperText={cityE ? "City is required" : ""}
       />
       <TextField
         id="state"
@@ -164,16 +164,17 @@ function Address({ setValidation }) {
         variant="standard"
         value={state}
         onChange={handleStateChange}
-        helperText={stateE ? 'State is required' : ''}
+        helperText={stateE ? "State is required" : ""}
       />
       <TextField
         id="zipcode"
+        type="number"
         label="Zipcode"
         error={zipcodeE}
         variant="standard"
         value={zipcode}
         onChange={handleZipcodeChange}
-        helperText={zipcodeE ? 'Zipcode is required' : ''}
+        helperText={zipcodeE ? "Zipcode is required" : ""}
       />
     </Box>
   );
